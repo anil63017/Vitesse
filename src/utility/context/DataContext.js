@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { useAuth } from "./AuthContext";
 import { createEmployee, getEmployeeList, getImmigrationEntries, updateEmployee } from "../../services/employeeService";
 import { createVendor, getVendorList, updateVendor } from "../../services/vendorService";
+import { ROLES } from "../constants";
 
 const DataContext = createContext();
 
@@ -16,15 +17,19 @@ function DataProvider({ children }) {
     const [clientList, setClientList] = useState([]);
     const [workingList, setWorkingList] = useState([]);
     const [isDataLoading, setisDataLoading] = useState(true);
-    const { userAccessToken } = useAuth();
+    const { userAccessToken , getUserRole } = useAuth();
 
     useEffect(() => {
         (async () => {
+            const userRole = getUserRole()
             const employeeData = await getEmployeeList(userAccessToken);
             setEmployeeList(employeeData.reduce((prev, curr) => {
                 prev[curr.employeeId] = { ...curr, entryDate: new Date(curr.entryDate).toISOString().split('T')[0] }
                 return prev
             }, {}));
+            //changes
+            if (userRole !== ROLES.HR ){
+
             const immigrationData = await getImmigrationEntries(userAccessToken);
             setImmigrationList(immigrationData.map((i) => {
                 return { ...i, visaValidity: new Date(i.visaValidity).toISOString().split('T')[0], entryDate: new Date(i.entryDate).toLocaleDateString() }
@@ -34,6 +39,13 @@ function DataProvider({ children }) {
                 return { ...v, entryDate: new Date(v.entryDate).toISOString().split('T')[0] }
             }))
             setisDataLoading(false);
+        }
+//changes
+
+        else{
+
+            setisDataLoading(false);
+        }
         })();
     }, [])
 
