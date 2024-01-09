@@ -108,10 +108,16 @@
       .main-menu {
         width: $menu-collapsed-width;
 
-        .navbar-header .brand-text,
+        .navbar-header .brand-logo,
         .modern-nav-toggle {
           display: none;
         }
+    
+        .navbar-header .brand-icon,
+        .modern-nav-toggle {
+          display: block!important;
+        }
+
 
         // When menu is collapsed and mouse is not hovered over menu
         &:not(.expanded) {
