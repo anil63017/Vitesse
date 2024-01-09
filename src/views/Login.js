@@ -57,7 +57,7 @@ const Login = () => {
         <Link className="brand-logo" to="/" onClick={(e) => e.preventDefault()}>
           <img
             style={{ height: '30px' }}
-            src={"src/assets/images/logo/logo.png"}
+            src={"https://vitesse-group.com/wp-content/uploads/2019/09/cropped-VLogoNewBlue-192x192.png"}
             alt="avatarImg"
 
           />
