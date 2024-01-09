@@ -16,7 +16,7 @@ import ProtectedRoute from "../../views/ProtectedRoute";
 import Clientdirectory from "../../views/pages/directories/ClientDirectory/Clientdirectory";
 import Employeedirectory from "../../views/pages/directories/EmployeeDirectory/Employeedirectory";
 import Immigrationdirectory from "../../views/pages/directories/ImmigrationDirectory/Immigrationdirectory";
-import Workassignmentsdirectory from "../../views/pages/directories/WorkAssignments/WorkAssignmentsdirectory";
+// import Workassignmentsdirectory from "../../views/pages/directories/WorkAssignments/WorkAssignmentsdirectory";
 import Vendordirectory from "../../views/pages/directories/VendorDirectory/Vendordirectory";
 
 
@@ -42,7 +42,7 @@ const Error = lazy(() => import("../../views/Error"));
 
 const Profile = lazy(() => import("../../views/pages/others/Profile"));
 const Userlist = lazy(() => import("../../views/pages/others/Userlist"));
-const Rolesresponsibilites = lazy(() => import("../../views/pages/others/Rolesresponsibilites"));
+// const Rolesresponsibilites = lazy(() => import("../../views/pages/others/Rolesresponsibilites"));
 // ** Merge Routes
 const Routes = [
   {
@@ -64,10 +64,10 @@ const Routes = [
       path: "/immigration-directory",
       element: <Immigrationdirectory />,
     },
-    {
-      path: "/working-directory",
-      element: <Workassignmentsdirectory />,
-    },
+    // {
+    //   path: "/working-directory",
+    //   element: <Workassignmentsdirectory />,
+    // },
     {
       path: "/client-directory",
       element: <Clientdirectory />,
