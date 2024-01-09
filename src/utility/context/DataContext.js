@@ -41,7 +41,6 @@ function DataProvider({ children }) {
             setisDataLoading(false);
         }
 //changes
-
         else{
 
             setisDataLoading(false);
