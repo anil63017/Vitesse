@@ -1,26 +1,26 @@
 const AUTH = {
-    LOGIN: 'http://localhost:5000/v1/auth/login',
-    REGISTER: 'http://localhost:5000/v1/auth/register',
-    VALIDATE: 'http://localhost:5000/v1/auth/validate',
+    LOGIN: 'https://vitesse-backend.onrender.com/v1/auth/login',
+    REGISTER: 'https://vitesse-backend.onrender.com/v1/auth/register',
+    VALIDATE: 'https://vitesse-backend.onrender.com/v1/auth/validate',
 }
 
 const EMPLOYEE = {
-    LIST: 'http://localhost:5000/v1/employee/list',
-    CREATE: 'http://localhost:5000/v1/employee/create',
-    BULK: 'http://localhost:5000/v1/employee/bulk',
-    UPDATE: 'http://localhost:5000/v1/employee/',
+    LIST: 'https://vitesse-backend.onrender.com/v1/employee/list',
+    CREATE: 'https://vitesse-backend.onrender.com/v1/employee/create',
+    BULK: 'https://vitesse-backend.onrender.com/v1/employee/bulk',
+    UPDATE: 'https://vitesse-backend.onrender.com/v1/employee/',
 }
 
 const VENDOR = {
-    LIST: 'http://localhost:5000/v1/vendor/list',
-    CREATE: 'http://localhost:5000/v1/vendor/create',
-    BULK: 'http://localhost:5000/v1/vendor/bulk',
-    UPDATE: 'http://localhost:5000/v1/vendor/',
+    LIST: 'https://vitesse-backend.onrender.com/v1/vendor/list',
+    CREATE: 'https://vitesse-backend.onrender.com/v1/vendor/create',
+    BULK: 'https://vitesse-backend.onrender.com/v1/vendor/bulk',
+    UPDATE: 'https://vitesse-backend.onrender.com/v1/vendor/',
 }
 
 const IMMIGRATION = {
-    LIST: 'http://localhost:5000/v1/employee/immigration/list',
-    BULK: 'http://localhost:5000/v1/employee/immigration/bulk',
+    LIST: 'https://vitesse-backend.onrender.com/v1/employee/immigration/list',
+    BULK: 'https://vitesse-backend.onrender.com/v1/employee/immigration/bulk',
 
 }
 const ROLES = {
