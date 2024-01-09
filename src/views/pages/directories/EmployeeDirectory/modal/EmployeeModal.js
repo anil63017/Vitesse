@@ -364,7 +364,7 @@ const EmployeeModal = ({ open, handleModal, closeModal, selectedEmployee }) => {
                 <Row className="gx-4">
                   <Col lg="12">
                     <Row className="gx-2 gy-1">
-                      <Col xs={12}>
+                      <Col xs={12} style={{"display":"flex"}}>
                         <div className="form-check mb-1">
                           <Input
                             type="radio"
@@ -381,7 +381,7 @@ const EmployeeModal = ({ open, handleModal, closeModal, selectedEmployee }) => {
                             Yes
                           </Label>
                         </div>
-                        <div className="form-check mb-1">
+                        <div className="form-check mb-1" style={{"marginLeft":"30px"}}>
                           <Input
                             type="radio"
                             value="onboard-no"
